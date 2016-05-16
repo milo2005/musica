@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="usuario"
+            type="movil.musica.models.Usuario"/>
+    </data>
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header"
+            android:background="#333333"
+            app:imgUrl="@{usuario.imagenBanner}"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:id="@+id/imgUser"
+            android:layout_width="@dimen/profile"
+            android:layout_height="@dimen/profile"
+            android:layout_alignBottom="@id/banner"
+            android:layout_margin="@dimen/small"
+            app:imgCircleUrl="@{usuario.imagen}"
+            />
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:padding="@dimen/small"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgUser"
+            android:layout_alignBottom="@id/imgUser"
+            android:text="@{usuario.nombre}"
+            />
+
+    </RelativeLayout>
+</layout>

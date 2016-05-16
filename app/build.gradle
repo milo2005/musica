@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
-    dataBinding{
+    dataBinding {
         enabled = true
     }
 
@@ -33,4 +33,5 @@ dependencies {
     compile 'com.android.support:palette-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'com.android.support:support-v4:23.3.0'
 }

@@ -3,7 +3,7 @@ package movil.musica.models;
 /**
  * Created by Dario Chamorro on 25/04/2016.
  */
-public class Cancion {
+public class Cancion extends Item{
 
     String titulo, genero, autor, duracion, album, imagen, imagenArtista;
 
@@ -61,5 +61,10 @@ public class Cancion {
 
     public void setImagenArtista(String imagenArtista) {
         this.imagenArtista = imagenArtista;
+    }
+
+    @Override
+    public int getTipo() {
+        return TYPE_SONG;
     }
 }

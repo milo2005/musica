@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Musica</string>
+    <string name="username">Nombre de Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="signin">registrar</string>
+    <string name="in">Entrar</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_playlist">Play List</string>
+    <string name="nav_toplist">Top List</string>
+    <string name="nav_news">Nuevos</string>
+    <string name="nav_perfil">Perfil</string>
+    <string name="nav_logout">Cerrar Sesion</string>
+    <string name="open_nav">Menu Laterar</string>
+    <string name="close_nav">cerrar menu lateral</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -6,4 +6,8 @@
     <dimen name="cancion_artist">80dp</dimen>
     <dimen name="small">10dp</dimen>
     <dimen name="cancion_icon">25dp</dimen>
+    <dimen name="medium">15dp</dimen>
+    <dimen name="img_album_h">200dp</dimen>
+    <dimen name="header">160dp</dimen>
+    <dimen name="profile">60dp</dimen>
 </resources>
