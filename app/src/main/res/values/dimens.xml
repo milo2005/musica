@@ -10,4 +10,5 @@
     <dimen name="img_album_h">200dp</dimen>
     <dimen name="header">160dp</dimen>
     <dimen name="profile">60dp</dimen>
+    <dimen name="collapsingbar">190dp</dimen>
 </resources>

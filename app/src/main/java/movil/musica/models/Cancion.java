@@ -5,7 +5,15 @@ package movil.musica.models;
  */
 public class Cancion extends Item{
 
-    String titulo, genero, autor, duracion, album, imagen, imagenArtista;
+    String titulo, genero, autor, duracion, album, imagen, imagenArtista, letra;
+
+    public String getLetra() {
+        return letra;
+    }
+
+    public void setLetra(String letra) {
+        this.letra = letra;
+    }
 
     public String getTitulo() {
         return titulo;

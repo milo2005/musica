@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import movil.musica.databinding.ActivityDetailBinding;
+import movil.musica.models.Cancion;
+import movil.musica.util.C;
 
 public class DetailActivity extends AppCompatActivity {
 
@@ -15,6 +17,13 @@ public class DetailActivity extends AppCompatActivity {
 
         setSupportActionBar(b.toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        int pos =  getIntent().getIntExtra("pos",0);
+
+        Cancion c = (Cancion) C.inicio.get(pos);
+
+        b.setCancion(c);
 
     }
 }

@@ -20,6 +20,7 @@ import movil.musica.databinding.HeaderNavBinding;
 import movil.musica.fragments.InicioFragment;
 import movil.musica.models.Album;
 import movil.musica.models.Cancion;
+import movil.musica.models.Item;
 import movil.musica.models.Usuario;
 import movil.musica.util.C;
 
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         c1.setAlbum("Carnival");
         c1.setImagen("");
         c1.setImagenArtista("http://www.radiocremebrulee.com/wp-content/uploads/2014/08/PoetsOfTheFall-Daze.jpg");
+        c1.setLetra("letra ...");
 
         Cancion c2 = new Cancion();
         c2.setTitulo("Rattle that lock ");
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         c2.setAlbum("Rattle");
         c2.setImagen("http://www.nacionrock.com/wp-content/uploads/rattle_that_lock_cover.jpg");
         c2.setImagenArtista("http://static.independent.co.uk/s3fs-public/thumbnails/image/2015/08/28/02/5864463.jpg");
+        c2.setLetra("letra ...");
 
         Album a1 =  new Album();
         a1.setNombre("AM");
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
         c3.setAlbum("Ratle");
         c3.setImagen("http://pad2.whstatic.com/images/thumb/a/a8/Figure-Out-a-Song-by-Ear-Step-3.jpg/aid93221-728px-Figure-Out-a-Song-by-Ear-Step-3.jpg");
         c3.setImagenArtista("http://lolp2.c3cdn.com/wp/wp-content/uploads/2014/03/Royal-Blood.jpg");
+        c3.setLetra("letra ...");
 
         C.inicio.add(c1);
         C.inicio.add(c2);
@@ -174,8 +178,10 @@ public class MainActivity extends AppCompatActivity implements DrawerLayout.Draw
 
     @Override
     public void onClick(int pos) {
-        Intent intent = new Intent(this, DetailActivity.class);
-        intent.putExtra("pos", pos);
-        startActivity(intent);
+        if(C.inicio.get(pos).getTipo() == Item.TYPE_SONG) {
+            Intent intent = new Intent(this, DetailActivity.class);
+            intent.putExtra("pos", pos);
+            startActivity(intent);
+        }
     }
 }
